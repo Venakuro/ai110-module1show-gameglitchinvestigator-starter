@@ -26,23 +26,32 @@ ans: The AI did not give me any wrong suggeston.
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+ans: I tried the game on the site. I played it to see if all the bugs i noticed were fixed. I also run it through the AI to see if it could still notice bugs.
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+  I tested if it would give me the right message if i guessed too high
 - Did AI help you design or understand any tests? How?
+AI designed the tests for different situations and i run the code to see if it passed.
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+ans: Streamlit reruns the whole script on every interaction, so random.randint() fired every time — new number each click.
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+ans: Every button click reruns the entire script from scratch. Session state is a notepad that survives reruns — values written there stick around.
 - What change did you make that finally gave the game a stable secret number?
+ans: Wrapping it in if "secret" not in st.session_state: so it only generates once, then reuses the stored value.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
+ans: Finding the bugs step by step and then asking AI for possible fixes and picking the one i feel is most effective.
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
+ans: Use it more as a guide.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+ans: I see AI as a friend and not just a cheat, because I feel guilty for using AI at first.
